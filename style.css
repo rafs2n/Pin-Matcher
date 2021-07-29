@@ -1,0 +1,133 @@
+body{
+    height: 100vh;
+    background-color: #10101B;
+}
+
+.card{
+    background-color: #222436;
+    text-align: center;
+    border: none;
+}
+
+
+.card-pingen {
+    height: 515px;
+    margin-top: 100px;
+    /* margin: 100px 0px; */
+    width: 60%;
+    margin-left: auto;
+    margin-right: 15px;
+}
+.card-pinmatch {
+    height: 515px;
+    margin-top: 100px;
+    /* margin: 100px 0px; */
+    width: 60%;
+    margin-left: 15px;
+}
+.card h5 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: whitesmoke;
+}   
+hr {
+    margin-bottom: 30px;
+    /* background-color: #555; */
+}
+
+.display {
+    padding: 13px 5px;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #3D4153;
+    color: whitesmoke;
+  /* border: 1px solid #555; */
+}
+.display:focus{
+    background-color: #3D4153;
+}
+input[readonly].display{
+    background-color: transparent;
+}
+#count{
+    text-align: center;
+    display: block;
+    margin-top: 115px;
+}
+
+.generate-btn {
+    border: 8px solid #39458C;
+    margin-bottom: 20px;
+    color: whitesmoke;
+    background-color: #495BC3;
+    border-radius: 50%;
+    padding: 43px 20px;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 40px;
+}
+.generate-btn:hover{
+    background-color: #39458C;
+    color: whitesmoke;
+}
+
+.button input{
+    padding: 10px 25px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #3D4153;
+    color: white;
+    font-size: 20px;
+}
+.button input:focus{
+    background-color: #3D4153;
+}
+.button input:hover{
+    background-color: #39458C;
+}
+.submit-btn{
+    color: white;
+    /* border: 2px solid white; */
+    width: 100%;
+    margin: 20px auto;
+    background-color: #495BC3;
+    font-size: 18px;
+}
+.submit-btn:hover{
+    color: white;
+    background-color: #39458C;
+}
+
+.input-value{
+    max-width: 100%;
+}
+
+.notify-section{
+    margin-top: 20px;
+    text-align: center;
+    
+}
+.notify-section p{
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 30px;
+    background-color: #222436;
+    color: white;
+}
+
+/* -------- Responsive for Mobile-------- */
+
+@media screen and (max-width: 991px){
+    .card{
+        margin: 20px auto;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .card{
+        width: 100%;
+    }
+}

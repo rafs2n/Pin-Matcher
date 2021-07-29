@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row no-gutters">
+      <div class="col-lg-6 col-12">
+        <div class="card card-pingen">
+          <div class="card-body">
+            <h5>Pin Generator</h5>
+            <hr>
+            <input type="text" id="display" class="form-control display" placeholder="Press Generate" readonly>
+            <!-- <h6 id="display">Press Generate</h6> -->
+            <button id="generate-btn" type="button" class="btn generate-btn">Generate</button>
+            <small class="text-danger" id="count"></small>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-12">
+        <div class="card card-pinmatch">
+          <div class="card-body">
+            <h5>Pin Matcher</h5>
+            <hr>
+            <input type="text" class="form-control display" id="cal-display" placeholder="Enter Pin" readonly>
+            <div id="input-value" class="input-value">
+              <div class="button">
+                <input type="button" value="7" onclick="calcVal(this.value)">
+                <input type="submit" value="8" onclick="calcVal(this.value)">
+                <input type="submit" value="9" onclick="calcVal(this.value)">
+              </div>
+              <div class="button">
+                <input type="submit" value="4" onclick="calcVal(this.value)">
+                <input type="submit" value="5" onclick="calcVal(this.value)">
+                <input type="submit" value="6" onclick="calcVal(this.value)">
+              </div>
+              <div class="button">
+                <input type="submit" value="1" onclick="calcVal(this.value)">
+                <input type="submit" value="2" onclick="calcVal(this.value)">
+                <input type="submit" value="3" onclick="calcVal(this.value)">
+              </div>
+              <div class="button">
+                <input type="submit" value="<" onclick="back()">
+                <input type="submit" value="0" onclick="calcVal(this.value)">
+                <input type="submit" value="C" onclick="empty()">
+              </div>
+              <button type="submit" class="btn submit-btn btn-block" id="submit">Submit</button>
+            </div>
+            <small class="text-danger" id="try-count"></small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="notify-section">
+      <p id="notify-notfound">❌ Pin Not Found, Please try again!</p>
+      <p id="notify-found">✅ Pin Matched... You Can Enter Now!</p>
+      <p id="if-blank">❌ Invalid Input. Try Again!</p>
+    </div>
+  </div>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="app.js"></script>
+
+</body>
+
+</html>
