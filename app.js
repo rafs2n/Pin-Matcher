@@ -59,35 +59,33 @@ function back() {
     let value = calc.value;
     calc.value = value.substr(0, value.length - 1);
 }
+function end() {
+
+}
 
 let maxCounter = 2;
 function checkPin() {
     let randomPin = displayPin.value;
     let userPin = calc.value;
     tryCount.innerText = `${maxCounter} Try Left`
-    if (maxCounter != 0) {
-        if (userPin != null && userPin != "") {
-            if (randomPin === userPin) {
-                // console.log('Pin Matched');
-                ifBlank.style.display = 'none';
-                notifyNot.style.display = 'none';
-                notifyFound.style.display = 'inline';
 
-            } else {
-                // console.log('Pin not found');
-                ifBlank.style.display = 'none';
-                notifyFound.style.display = 'none';
-                notifyNot.style.display = 'inline';
-            }
-        }
-        else {
-            // console.log("Empty");
-            ifBlank.style.display = 'inline';
+    if (userPin != null && userPin != "") {
+        if (randomPin === userPin) {
+            // console.log('Pin Matched');
+            ifBlank.style.display = 'none';
+            notifyNot.style.display = 'none';
+            notifyFound.style.display = 'inline';
+
+        } else {
+            // console.log('Pin not found');
+            ifBlank.style.display = 'none';
+            notifyFound.style.display = 'none';
+            notifyNot.style.display = 'inline';
         }
     }
     else {
-        console.log("Finish Try");
-        test.disabled = true;
+        // console.log("Empty");
+        ifBlank.style.display = 'inline';
     }
     maxCounter--;
 }
