@@ -60,7 +60,7 @@ function back() {
     calc.value = value.substr(0, value.length - 1);
 }
 function end() {
-
+    submitBtn.disabled = true;
 }
 
 let maxCounter = 2;
@@ -68,24 +68,28 @@ function checkPin() {
     let randomPin = displayPin.value;
     let userPin = calc.value;
     tryCount.innerText = `${maxCounter} Try Left`
+    if (maxCounter <= 0) {
+        end();
+        console.log("Try over");
+    } else {
+        if (userPin != null && userPin != "") {
+            if (randomPin === userPin) {
+                // console.log('Pin Matched');
+                ifBlank.style.display = 'none';
+                notifyNot.style.display = 'none';
+                notifyFound.style.display = 'inline';
 
-    if (userPin != null && userPin != "") {
-        if (randomPin === userPin) {
-            // console.log('Pin Matched');
-            ifBlank.style.display = 'none';
-            notifyNot.style.display = 'none';
-            notifyFound.style.display = 'inline';
-
-        } else {
-            // console.log('Pin not found');
-            ifBlank.style.display = 'none';
-            notifyFound.style.display = 'none';
-            notifyNot.style.display = 'inline';
+            } else {
+                // console.log('Pin not found');
+                ifBlank.style.display = 'none';
+                notifyFound.style.display = 'none';
+                notifyNot.style.display = 'inline';
+            }
         }
-    }
-    else {
-        // console.log("Empty");
-        ifBlank.style.display = 'inline';
+        else {
+            // console.log("Empty");
+            ifBlank.style.display = 'inline';
+        }
     }
     maxCounter--;
 }
